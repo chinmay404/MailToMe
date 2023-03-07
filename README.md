@@ -1,5 +1,3 @@
 # MailToMe
 
-Mailtome is simple website based on django. It solves problem that if we working on remote location and we need save our work.one way to login with gmail and save on drive ,bit we cant trust anyone.
-Another way is to mail ourselves and send files in attachment for that we also need to signing with gmail.To solve this problem Mailtome service is here.
-In mailtome without signing your gmail account send mail to yourself with attachment 
+Mailtome is a simple website based on Django. It solves the problem of needing to save work while working remotely. One solution is to log in with Gmail and save the work on Google Drive, but trusting someone else with your Google account is not ideal. Another solution is to email the work to yourself as an attachment, but this also requires signing in to Gmail. To solve this problem, Mailtome offers a service where you can send an email with attachments to yourself without having to sign in to your Gmail account.This will works on small size of files.
