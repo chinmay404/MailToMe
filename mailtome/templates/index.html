@@ -1,0 +1,98 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+
+
+<div class="container py-5" style="margin-top: 80px;">
+    <div class="row justify-content-center">
+        <div class="col-md-18">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="text-center mb-4">Send</h3>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="{{ form.my_field.id_for_label }}">Subject</label>
+                            {{form.sub|as_crispy_field}}
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Message</label>
+                            {{form.mssg|as_crispy_field}}
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="exampleFormControlFile1">Attachment</label>
+                            {{form.file}}
+                            <small id="passwordHelpInline" class="text-muted">
+                                Maximum file size is 20 MB
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .messages {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-group small {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .card {
+        border: none;
+    }
+
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: none;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0062cc;
+        border-color: #005cbf;
+    }
+
+    .btn-primary:focus,
+    .btn-primary.focus {
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    }
+
+    .btn-primary.disabled,
+    .btn-primary:disabled {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .show>.btn-primary.dropdown-toggle {
+        background-color: #0062cc;
+        border-color: #005cbf;
+    }
+</style>
+{% endblock %}

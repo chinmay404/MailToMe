@@ -1,0 +1,71 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <h1 class="display-4 mb-3">Save Your Work Remotely with Mailtome</h1>
+            <p class="lead mb-5">Mailtome is a simple website based on Django that solves the problem of needing to save
+                work while working remotely. With Mailtome, you can send an email with attachments to yourself without
+                having to sign in to your Gmail account.</p>
+            <a class="btn btn-primary btn-lg me-3" href="/register">Sign Up Now</a>
+            <a class="btn btn-outline-primary btn-lg" href="/login">Login</a>
+            <a class="btn btn-outline-primary btn-lg" href="/land">Send now</a>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<!-- <footer class="bg-dark text-center text-white py-3">
+    <div class="container">
+        <p class="mb-0">&copy; 2023 Mailtome. All rights reserved.</p>
+    </div>
+</footer> -->
+<style>
+    /* Style for main content */
+    .container {
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        font-size: 1.5rem;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+    }
+
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+        font-size: 1.5rem;
+    }
+
+    .btn-outline-primary:hover {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    /* Style for footer */
+    footer {
+        background-color: #343a40;
+        color: #fff;
+        font-size: 0.2rem;
+    }
+</style>
+{% endblock %}
