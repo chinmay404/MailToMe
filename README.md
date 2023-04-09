@@ -22,7 +22,7 @@ source env/bin/activate
 * Run the server
 
 ### Using Docker
-Docker Image Link [docker push chinmay1718/mailtome-server:1)
+[Docker Image Link] (docker push chinmay1718/mailtome-server:1)
 
 Run the container from the image.
 ## Usage
